@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/about_us.css' ) }}">
+{% endblock %}
+
+
+{% block content %}
+    <div class="about-us-banner">
+        <img src="{{ url_for('static', filename='img/about-us-banner.png' ) }}" alt="about-us-banner" class="about-us-banner-photo">
+    </div>
+    <div class="about-us-text">
+        <span class="b">Аптека "АВЦ"</span> прагне створити дружню та затишну атмосферу для наших клієнтів. Ми завжди раді бачити вас в наших аптеках та надати вам найкращу можливу допомогу. Ваше здоров'я – наш пріоритет, і ми прагнемо зробити все можливе, щоб ви почувалися комфортно та доглянуті.
+    </div>
+    <div class="our-values">
+        <div class="our-values-heading">
+            Наші цінності
+        </div>
+        <div class="our-values-photos">
+            <img src="{{ url_for('static', filename='img/ov-photo.png' ) }}" alt="our-values-photo" class="our-values-photo">
+        </div>
+    </div>
+{% endblock %}

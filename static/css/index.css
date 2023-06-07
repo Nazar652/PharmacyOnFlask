@@ -1,0 +1,81 @@
+.banner, .bottom-banner {
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+.banner-photo, .bottom-banner-photo {
+    width: 100%;
+    display: block;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 40px 0;
+}
+
+.item-heading {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 48px;
+    line-height: 114.19%;
+    color: #FCFCFC;
+    margin: 0 0 10px 50px;
+}
+
+.item-block {
+    background: #FCFCFC;
+    border-radius: 50px;
+    padding: 50px;
+}
+
+.popular-brands > .item-block, .top-drugs > .item-block{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.popular-brands img {
+    width: 100%;
+}
+
+.item-block.desc {
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 114.19%;
+    text-align: justify;
+}
+
+.item-block.desc .b {
+    font-weight: 700;
+}
+
+.top-drugs .item-block {
+    height: 400px;
+}
+
+.drug-title {
+    padding: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 114.19%;
+}
+
+.simple-drug-main {
+    flex: 1 1 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.drug-photo {
+    height: 200px;
+}
+
+.drug-photo-container {
+    text-align: center;
+}

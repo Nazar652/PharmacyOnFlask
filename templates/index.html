@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css' ) }}">
+{% endblock %}
+
+{% block content %}
+    <div class="banner">
+        <img src="{{ url_for('static', filename='img/banner.png' ) }}" alt="banner" class="banner-photo">
+    </div>
+    <div class="main-content">
+        <div class="content-item popular-brands">
+            <p class="item-heading">
+                Популярні бренди
+            </p>
+            <div class="item-block">
+                {% for i in range(1, 5) %}
+                    <div><img src="{{ url_for('static', filename='img/brand{}.png'.format(i) ) }}" alt="brand-logo" class="brand-logo"></div>
+                {% endfor %}
+            </div>
+        </div>
+
+        <div class="content-item online-pharmacy">
+            <p class="item-heading">
+                Онлайн аптека АВЦ
+            </p>
+            <div class="item-block desc">
+                <span class="b">Ласкаво просимо до аптеки "АВЦ"</span> – вашого надійного партнера у справах здоров'я та добробуту! Ми – сучасна аптечна мережа, яка пропонує широкий спектр фармацевтичних продуктів та послуг для задоволення всіх вашіх потреб у лікарських препаратах.<br>
+                У нашій аптеці ми прагнемо забезпечити нашим клієнтам найвищу якість обслуговування та доступ до необхідних медичних засобів. Ми працюємо з провідними виробниками фармацевтичної продукції, що гарантує надійність та ефективність кожного препарату, який ми пропонуємо.
+            </div>
+        </div>
+
+        <div class="content-item top-drugs">
+            <p class="item-heading">
+                Хіти продажів
+            </p>
+            <div class="item-block">
+                {% for i in most_valuable %}
+                    <a href="/catalog/{{ i['id'] }}">
+                        <div class="simple-drug-main">
+                            <div class="drug-photo-container">
+                                <img src="{{ i['photo'] }}" alt="drug-photo" class="drug-photo">
+                            </div>
+                            <p class="drug-title">{{ i['title'] }}</p>
+                        </div>
+                    </a>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <div class="bottom-banner">
+        <img src="{{ url_for('static', filename='img/bottom-banner.png' ) }}" alt="banner" class="bottom-banner-photo">
+    </div>
+{% endblock %}

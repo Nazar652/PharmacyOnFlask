@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block head %}
+     <link rel="stylesheet" href="{{ url_for('static', filename='css/page.css' ) }}">
+{% endblock %}
+
+{% block content %}
+    <div class="main-container">
+        <div class="photo-title-price">
+            <div class="photo">
+                <img src="{{ drug['photo'] }}" alt="drug-photo" class="drug-photo">
+            </div>
+            <div class="title-price">
+                <div class="title">
+                    {{ drug['title'] }}
+                </div>
+                <div class="price">
+                    <div class="price-text">{{ drug['price'] }} грн</div>
+                    <div class="shopping-cart"><img src="{{ url_for('static', filename='img/shopping-cart.png' ) }}" alt="shopping-cart-img" class="shopping-cart-img"></div>
+                </div>
+            </div>
+        </div>
+        <div class="desc">
+            {{ drug['description'] }}
+        </div>
+    </div>
+{% endblock %}

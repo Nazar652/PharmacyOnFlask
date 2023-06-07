@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    {% block head %}
+    {% endblock %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+</head>
+<body>
+    <header>
+        <div class="wrapper header">
+            <a href="/">
+                <div class="logo">
+                    <div class="logo-photo">
+                        <img src="{{ url_for('static', filename='img/logo.png' ) }}" alt="logo">
+                    </div>
+                    <div class="logo-text">
+                        Аптека<br>АВЦ
+                    </div>
+                </div>
+            </a>
+            <div class="nav-bar">
+                <a href="/catalog" class="nav-link"><div class="nav-item">КАТАЛОГ</div></a>
+                <a href="/about-us" class="nav-link"><div class="nav-item">ПРО НАС</div></a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="wrapper main">
+            {% block content %}
+            {% endblock %}
+        </div>
+    </main>
+    <footer>
+        <div class="wrapper footer">
+            <div class="footer-inner">
+                <div class="small-logo">
+                    <img src="{{ url_for('static', filename='img/small-logo.png' ) }}" alt="small-logo" class="small-logo-photo">
+                </div>
+                <div class="downolad-bar">
+                    <p class="download-text">Завантажуйте наш додаток</p>
+                    <div class="download-buttons">
+                        <a href="#" class="download-link">
+                            <img src="{{ url_for('static', filename='img/google-play.png' ) }}" alt="google-play" class="download-img">
+                        </a>
+                        <a href="#" class="download-link">
+                            <img src="{{ url_for('static', filename='img/app-store.png' ) }}" alt="app-store" class="download-img">
+                        </a>
+                    </div>
+                </div>
+                <div class="small-logo-text">
+                    Аптека<br>АВЦ
+                </div>
+            </div>
+            <div class="self-med-container">
+                <img src="{{ url_for('static', filename='img/self-med.png' ) }}" alt="self-med" class="self-med">
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

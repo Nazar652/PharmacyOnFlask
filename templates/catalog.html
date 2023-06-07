@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block head %}
+     <link rel="stylesheet" href="{{ url_for('static', filename='css/catalog.css' ) }}">
+{% endblock %}
+
+{% block content %}
+    <div class="chapters">
+        <p class="chapter">Лікарські засоби</p>
+        <p class="chapter">Вітаміни та добавки</p>
+        <p class="chapter">Сексуальне здоров'я</p>
+        <p class="chapter">Особиста гігієна</p>
+        <p class="chapter">Товари для дітей</p>
+    </div>
+    <div class="catalog">
+    {% for c in list_of_drugs %}
+        <div class="drug">
+            <a href="/catalog/{{ c['id'] }}">
+                <div class="drug-photo-container">
+                    <img src="{{ c['photo'] }}" alt="drug-photo" class="drug-photo">
+                </div>
+                <p class="drug-title">
+                    {{ c['title'] }}
+                </p>
+                <p class="drug-price">
+                    {{ c['price'] }} грн
+                </p>
+            </a>
+        </div>
+    {% endfor %}
+    </div>
+{% endblock %}

@@ -1,0 +1,40 @@
+.about-us-banner, .our-values-photos {
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+.about-us-banner-photo, .our-values-photo {
+    width: 100%;
+    display: block;
+}
+
+.about-us-text {
+    background: #FCFCFC;
+    border-radius: 50px;
+    padding: 50px;
+
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 100.69%;
+    text-align: justify;
+}
+
+span.b {
+    font-weight: 700;
+}
+
+.our-values-heading {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 48px;
+    line-height: 114.19%;
+    color: #FCFCFC;
+    text-align: center;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    gap: 40px
+}
+

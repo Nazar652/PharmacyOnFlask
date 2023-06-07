@@ -1,0 +1,48 @@
+.chapters {
+    display: flex;
+    justify-content: space-between;
+}
+
+.chapter {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 100.69%;
+    text-align: center;
+}
+
+.main {
+    padding: 40px;
+}
+
+.catalog {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 70px;
+    margin-top: 40px;
+}
+
+.drug {
+    background: #FCFCFC;
+    border-radius: 50px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+.drug-photo-container {
+    text-align: center;
+}
+
+.drug-photo {
+    width: 200px;
+}
+
+.drug-title, .drug-price {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 38px;
+}
+
+.drug-price {
+    align-self: flex-end;
+}
